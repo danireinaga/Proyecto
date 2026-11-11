@@ -1,0 +1,410 @@
+/* ============================================================
+   Estilos del Panel Administrativo - Paleta Lila y Rosado
+   Archivo: public/estilos/css/admin.css
+   Cargado por el plugin 'EstilosAdmin' en config/adminlte.php
+   ============================================================ */
+
+:root {
+    --lila-oscuro: #3c1a45;
+    --lila-principal: #6b3461;
+    --lila-suave: #a06b9d;
+    --rosado-claro: #fae3ed;
+    --rosado-suave: #faf2f7;
+    --rosado-medio: #e4d3f5;
+    --texto-lila: #5b2b52;
+}
+
+/* ------------------- Barra lateral (sidebar) ------------------- */
+.main-sidebar,
+.main-sidebar.sidebar-dark-primary {
+    background: linear-gradient(180deg, #6b3461 0%, #4a1d47 100%);
+}
+
+.main-sidebar .brand-link {
+    background: linear-gradient(135deg, #3c1a45 0%, #6b3461 100%);
+    border-bottom: 1px solid rgba(250, 227, 237, 0.15);
+    color: #fae3ed;
+}
+
+.main-sidebar .brand-image {
+    width: auto;
+    max-width: 68px;
+    max-height: 42px;
+    object-fit: contain;
+    margin-left: 0;
+    margin-right: 0.6rem;
+    border-radius: 0;
+    box-shadow: none !important;
+    opacity: 1;
+}
+
+.main-sidebar .brand-text {
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.main-sidebar .sidebar-logout-link {
+    margin: 0.45rem 0.5rem;
+    width: calc(100% - 1rem);
+    border: 1px solid rgba(255, 220, 225, 0.32);
+    border-radius: 0.5rem;
+    background: rgba(148, 35, 65, 0.42);
+    color: #fff !important;
+}
+
+.main-sidebar .sidebar-logout-link:hover,
+.main-sidebar .sidebar-logout-link:focus {
+    background: #9d2948 !important;
+    color: #fff !important;
+}
+
+.main-sidebar .sidebar-logout-link .nav-icon {
+    color: #fff !important;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link {
+    color: rgba(250, 227, 237, 0.85);
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link:focus,
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link:hover {
+    background-color: rgba(250, 227, 237, 0.12);
+    color: #fae3ed;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item.menu-open>.nav-link,
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background: linear-gradient(90deg, #a06b9d 0%, #6b3461 100%);
+    color: #faf2f7;
+}
+
+.sidebar-dark-primary .nav-sidebar .nav-item .nav-link.active {
+    background-color: rgba(250, 227, 237, 0.18);
+    color: #fae3ed;
+}
+
+.sidebar-dark-primary .sidebar .nav-link.active,
+.sidebar-dark-primary .treeview-menu .nav-link.active {
+    background-color: rgba(250, 227, 237, 0.18);
+    color: #faf2f7;
+}
+
+.sidebar-dark-primary .nav-header {
+    color: rgba(250, 227, 237, 0.6);
+}
+
+/* ------------------- Íconos del menú lateral ------------------- */
+
+.nav-sidebar>.nav-item .nav-icon,
+a .nav-icon {
+    color: #f8d9f0 !important;
+    opacity: 1 !important;
+}
+
+/* Íconos al pasar el mouse */
+.nav-sidebar>.nav-item>.nav-link:hover .nav-icon {
+    color: #ffffff !important;
+}
+
+/* Ícono del elemento seleccionado */
+.nav-sidebar>.nav-item>.nav-link.active .nav-icon {
+    color: #ffffff !important;
+}
+
+.sidebar .user-panel .info>p,
+.sidebar .user-panel .info>a {
+    color: #fae3ed;
+}
+
+/* ------------------- Barra superior (navbar) ------------------- */
+.navbar-white.navbar-light,
+.navbar.navbar-white {
+    background: linear-gradient(135deg, #faf2f7 0%, #fae3ed 100%);
+    border-bottom: 1px solid #e4d3f5;
+}
+
+.navbar-white .nav-link,
+.navbar-light .nav-link,
+.navbar-white .nav-item {
+    color: #5b2b52;
+}
+
+.navbar-white .nav-link:hover,
+.navbar-white .nav-item:hover {
+    color: #6b3461;
+}
+
+.navbar .navbar-search-block .form-control {
+    border-color: #e4d3f5;
+}
+
+/* ------------------- Contenido principal ------------------- */
+.content-wrapper,
+.main-footer {
+    background: linear-gradient(180deg, #faf2f7 0%, #f7ebf1 45%, #fae3ed 100%);
+}
+
+.content-header .breadcrumb {
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.content-header h1,
+.content-header h4 {
+    color: #5b2b52;
+}
+
+/* ------------------- Tarjetas (cards) ------------------- */
+.card {
+    border-radius: 0.55rem;
+    border: 1px solid #eedaf2;
+    box-shadow: 0 0.35rem 0.9rem rgba(107, 52, 97, 0.08);
+}
+
+.card-header,
+.card.card-primary .card-header {
+    background: linear-gradient(135deg, #6b3461 0%, #a06b9d 100%);
+    color: #faf2f7;
+    border-bottom: 1px solid #e4d3f5;
+}
+
+.card-header .card-title,
+.card-header h3,
+.card-header h5 {
+    color: #faf2f7;
+}
+
+.card-outline.card-primary {
+    border-top: 3px solid #6b3461;
+}
+
+.card-outline.card-primary .card-header {
+    background-color: transparent;
+    color: #5b2b52;
+}
+
+/* ------------------- Tablas ------------------- */
+.table thead th {
+    background: linear-gradient(135deg, #6b3461 0%, #a06b9d 100%);
+    color: #faf2f7;
+    border-color: #eedaf2;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #faf2f7;
+}
+
+.table-bordered,
+.table-bordered td,
+.table-bordered th {
+    border-color: #eedaf2;
+}
+
+.table tbody tr:hover {
+    background-color: #fae3ed;
+}
+
+/* ------------------- Formularios y controles ------------------- */
+.form-control:focus,
+.form-select:focus {
+    border-color: #a06b9d;
+    box-shadow: 0 0 0 0.2rem rgba(160, 107, 157, 0.25);
+}
+
+.form-control {
+    border-color: #eedaf2;
+}
+
+.form-control:focus {
+    border-color: #a06b9d;
+}
+
+.text-primary,
+.small-box .icon,
+a .nav-icon {
+    color: #6b3461 !important;
+}
+
+/* ------------------- Botones (lila y rosado) ------------------- */
+.btn-primary,
+.btn.btn-primary {
+    background: linear-gradient(135deg, #6b3461 0%, #4a1d47 100%);
+    border-color: #5b2b52;
+    color: #faf2f7;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background: #a06b9d;
+    border-color: #6b3461;
+    color: #fff;
+}
+
+.btn-outline-primary {
+    color: #6b3461;
+    border-color: #6b3461;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6b3461;
+    border-color: #6b3461;
+    color: #faf2f7;
+}
+
+.btn-warning,
+.btn.btn-warning {
+    background: #f5a623;
+    border-color: #f5a623;
+}
+
+/* ------------------- Badges y etiquetas ------------------- */
+.badge-primary {
+    background-color: #6b3461;
+    color: #faf2f7;
+}
+
+.badge-info {
+    background-color: #a06b9d;
+    color: #fff;
+}
+
+/* ------------------- Pequeñas cajas (small-box) ------------------- */
+.small-box {
+    border-radius: 0.55rem;
+    border: 1px solid #eedaf2;
+}
+
+.small-box.bg-primary {
+    background: linear-gradient(135deg, #6b3461 0%, #4a1d47 100%) !important;
+}
+
+/* ------------------- Login / Auth ------------------- */
+.login-card-body,
+.register-card-body {
+    border-top: 3px solid #6b3461;
+}
+
+/* ------------------- Accesorios ------------------- */
+.progress-bar,
+.progress.progress-bar-primary,
+.pace .pace-progress {
+    background-color: #6b3461;
+}
+
+.preloader {
+    background-color: #3c1a45 !important;
+}
+
+.preloader img {
+    width: min(42vw, 210px);
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 0 !important;
+    background: transparent;
+    box-shadow: none;
+}
+
+.main-footer {
+    border-top: 1px solid #eedaf2;
+    color: #5b2b52;
+}
+
+.main-footer a {
+    color: #6b3461;
+}
+
+a {
+    color: #6b3461;
+}
+
+a:hover {
+    color: #5b2b52;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #6b3461;
+    border-color: #6b3461;
+}
+
+.page-link {
+    color: #6b3461;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.input-group-text {
+    background-color: #6b3461;
+    color: #faf2f7;
+}
+
+/* ============================================================
+   Utilidades de marca "morado" (Bootstrap 4 no las trae)
+   Las vistas las usan como .text-purple, .bg-purple, .card-purple...
+   ============================================================ */
+.text-purple {
+    color: #6b3461 !important;
+}
+
+.bg-purple {
+    background-color: #6b3461 !important;
+    color: #fff;
+}
+
+.btn-purple {
+    background-color: #6b3461;
+    border-color: #6b3461;
+    color: #fff;
+}
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active {
+    background-color: #4a1d47;
+    border-color: #3c1a45;
+    color: #fff;
+}
+
+.btn-outline-purple {
+    background: transparent;
+    border-color: #6b3461;
+    color: #6b3461;
+}
+
+.btn-outline-purple:hover {
+    background-color: #6b3461;
+    color: #fff;
+}
+
+.card-purple,
+.card-outline.card-purple {
+    border-top: 3px solid #6b3461;
+}
+
+.card-purple .card-header {
+    background: linear-gradient(135deg, #6b3461 0%, #4a1d47 100%);
+    color: #fff;
+}
+
+.badge-purple {
+    background-color: #6b3461;
+    color: #fff;
+}
+
+.table-purple thead th {
+    background-color: #6b3461;
+    color: #fff;
+    border-bottom: 2px solid #4a1d47;
+}
+
+.small-box.bg-purple {
+    background: linear-gradient(135deg, #6b3461 0%, #4a1d47 100%) !important;
+    color: #fff;
+}
+
+/* Etiquetas de estado de los pedidos */
+.estado-badge {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}

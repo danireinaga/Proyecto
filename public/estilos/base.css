@@ -1,0 +1,315 @@
+/* ==========================================================
+   base.css — Azúcar y Yo · Repostería Artesanal
+   Estilos base compartidos: variables, navbar, botones,
+   tarjetas de producto y footer.
+   ========================================================== */
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #fae3ed 0%, #eedaf2 50%, #e4d3f5 100%);
+    --primary-purple: #6a397b;
+    --primary-hover: #542b63;
+    --text-dark: #3c1a45;
+    --text-muted: #6c5a70;
+    --pill-bg: rgba(255, 255, 255, 0.72);
+    --pill-border: rgba(255, 255, 255, 0.85);
+    --card-bg: rgba(255, 255, 255, 0.65);
+    --white-glass: rgba(255, 255, 255, 0.9);
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --radius-pill: 50px;
+    --shadow-sm: 0 4px 18px rgba(106, 57, 123, 0.07);
+    --shadow-md: 0 10px 28px rgba(106, 57, 123, 0.1);
+    --shadow-lg: 0 16px 38px rgba(106, 57, 123, 0.16);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------- Navbar flotante ---------------- */
+.navbar-custom {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.brand-logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.brand-logo:hover {
+    color: var(--primary-purple);
+}
+
+.brand-logo-image {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.brand-logo-image img {
+    display: block;
+    width: auto;
+    max-width: min(30vw, 150px);
+    height: 58px;
+    object-fit: contain;
+}
+
+.footer-brand-image img {
+    display: block;
+    width: auto;
+    max-width: 120px;
+    height: 48px;
+    object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+    .brand-logo-image img {
+        max-width: 110px;
+        height: 46px;
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(106, 57, 123, 0.2);
+    border-radius: 12px;
+}
+
+.nav-pill-container {
+    background: var(--pill-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--pill-border);
+    border-radius: var(--radius-pill);
+    padding: 6px 18px;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-pill-container .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-pill-container .nav-link:hover,
+.nav-pill-container .nav-link.active {
+    background-color: var(--white-glass);
+    color: var(--primary-purple);
+}
+
+.btn-icon-admin,
+.btn-cart {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-icon-admin:hover,
+.btn-cart:hover {
+    background: var(--primary-purple);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.btn-pedido {
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 9px 24px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 16px rgba(106, 57, 123, 0.22);
+}
+
+.btn-pedido:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ---------------- Tarjeta de producto ---------------- */
+.product-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    padding: 22px 20px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background: var(--white-glass);
+}
+
+.product-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.product-img {
+    max-height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.16));
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.06);
+}
+
+.product-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.product-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.rating-stars {
+    color: #f5a623;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+/* ---------------- Footer ---------------- */
+.footer-custom {
+    padding: 40px 0 35px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(106, 57, 123, 0.12);
+}
+
+.footer-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-brand:hover {
+    color: var(--primary-purple);
+}
+
+.footer-nav .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav .nav-link:hover {
+    color: var(--primary-purple);
+}
+
+/* --- ESTILOS OFFCANVAS CARRITO --- */
+.cart-offcanvas {
+    background-color: #faf2f7;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 25px rgba(80, 35, 83, 0.15);
+}
+
+.cart-offcanvas .offcanvas-header {
+    border-bottom-color: rgba(106, 57, 123, 0.15) !important;
+}
+
+.cart-offcanvas .offcanvas-title {
+    color: #4a1d47;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart-footer {
+    border-top-color: rgba(106, 57, 123, 0.15) !important;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb956;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+/* ---------------- Responsive ---------------- */
+@media (max-width: 991.98px) {
+    .navbar-custom {
+        padding-top: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .nav-pill-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

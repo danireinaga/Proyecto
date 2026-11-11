@@ -1,0 +1,381 @@
+/* ==========================================================
+   index.css — Página principal (landing)
+   Hero, destacados, características, cuestionario, reseñas
+   y canvas 3D.
+   ========================================================== */
+
+/* ---------------- Hero ---------------- */
+.hero-section {
+    padding: 70px 0 90px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.08;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-top: 22px;
+    margin-bottom: 32px;
+    max-width: 480px;
+    line-height: 1.65;
+}
+
+.btn-hero {
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 14px 38px;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 26px rgba(106, 57, 123, 0.28);
+}
+
+.btn-hero:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(106, 57, 123, 0.38);
+}
+
+/* Contenedor 3D del hero */
+.hero-3d-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+}
+
+.hero-3d-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------- Sección TOP / Destacados ---------------- */
+.top-section {
+    padding: 70px 0;
+    position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 40px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.top-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-size: clamp(8rem, 18vw, 14rem);
+    font-weight: 900;
+    color: rgba(106, 57, 123, 0.05);
+    letter-spacing: 20px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.top-section .product-card {
+    text-align: center;
+}
+
+.top-section .product-img-wrapper {
+    height: 140px;
+}
+
+.top-section .product-img {
+    transition: transform 0.3s ease;
+}
+
+.top-section .product-card:hover .product-img,
+.top-section .product-card:focus-within .product-img {
+    transform: scale(1.04);
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 4px;
+}
+
+.btn-card-action {
+    background: transparent;
+    border: none;
+    color: var(--primary-purple);
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+
+.btn-card-action:hover {
+    color: #d63384;
+    transform: scale(1.2);
+}
+
+.btn-ver-catalogo {
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 11px 34px;
+    font-size: 0.95rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 7px 22px rgba(106, 57, 123, 0.26);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ver-catalogo:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 11px 28px rgba(106, 57, 123, 0.36);
+}
+
+/* ---------------- Sección características (Nosotros) ---------------- */
+.features-section {
+    padding: 60px 0;
+    position: relative;
+}
+
+.features-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.feature-item {
+    position: relative;
+    padding-left: 65px;
+    margin-bottom: 35px;
+}
+
+.feature-number {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: rgba(106, 57, 123, 0.2);
+    line-height: 1;
+    user-select: none;
+}
+
+.feature-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.feature-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.features-3d-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    position: relative;
+}
+
+/* ---------------- Banner cuestionario ---------------- */
+.quiz-banner {
+    background: rgba(253, 245, 235, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    padding: 45px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.quiz-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.quiz-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 26px;
+    max-width: 480px;
+}
+
+.btn-quiz {
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 11px 32px;
+    font-size: 0.95rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(106, 57, 123, 0.22);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-quiz:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.placeholder-3d {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    border: 2px dashed rgba(106, 57, 123, 0.3);
+}
+
+.placeholder-3d-icon {
+    color: var(--primary-purple);
+}
+
+.placeholder-3d-text {
+    color: var(--text-dark);
+}
+
+/* ---------------- Reseñas ---------------- */
+.reviews-section {
+    padding: 60px 0;
+}
+
+.review-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    background: var(--white-glass);
+    box-shadow: var(--shadow-md);
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #5a3264;
+    line-height: 1.6;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-purple);
+}
+
+.review-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.review-date {
+    font-size: 0.75rem;
+    color: #8a7a8f;
+    margin: 0;
+}
+
+.quote-icon {
+    font-size: 1.8rem;
+    color: rgba(106, 57, 123, 0.2);
+    margin-bottom: 10px;
+}
+
+/* ---------------- Canvas 3D y capas ---------------- */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(
+        circle 160px at var(--hero-glow-x, 70vw) var(--hero-glow-y, 40vh),
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(228, 211, 245, 0.25) 70%,
+        transparent 100%
+    );
+}
+
+section,
+header,
+footer {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    .hero-3d-wrapper {
+        min-height: 260px;
+    }
+
+    .features-3d-wrapper {
+        min-height: 240px;
+    }
+
+    #webgl-canvas {
+        opacity: 0.55;
+    }
+
+    .quiz-banner {
+        padding: 32px 24px;
+    }
+}
